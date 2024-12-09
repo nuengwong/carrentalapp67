@@ -3,6 +3,7 @@ import ProductCard from './ProductCard';
 
 export default async function CarCatalog({ carJson }: { carJson: Object }) {
   const carJsonReady = await carJson;
+
   return (
     <>
       Explore {carJsonReady.count} models in our catalog
@@ -17,7 +18,7 @@ export default async function CarCatalog({ carJson }: { carJson: Object }) {
         }}
       >
         {carJsonReady.data.map((carItem: Object) => (
-          <Link href={`/car/${carItem.cid}`} className="w-1/5">
+          <Link href={`/car/${carItem.id}`} className="w-1/5">
             <ProductCard carName={carItem.model} imgSrc={carItem.picture} />
           </Link>
         ))}

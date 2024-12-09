@@ -65,7 +65,7 @@ export default function CarPanel() {
         }}
       >
         {carResponse.data.map((carItem: Object) => (
-          <Link href={`/car/${carItem.id}`} className="w-1/5">
+          <Link key={carItem.id} href={`/car/${carItem.id}`} className="w-1/5">
             <ProductCard
               carName={carItem.model}
               imgSrc={carItem.picture}
