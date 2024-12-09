@@ -10,7 +10,9 @@ export const cartSlice=createSlice({
     initialState,
     reducers:{
         addReservation:(state,action:PayloadAction<ReservationItem>)=>{
+            console.log("push: "+action.payload.carId);
             state.carItems.push(action.payload)
+            console.log(state.carItems.length);
         },
         removeReservation:(state,action:PayloadAction<ReservationItem>)=>{
             const remainItems = state.carItems.filter(obj=> {

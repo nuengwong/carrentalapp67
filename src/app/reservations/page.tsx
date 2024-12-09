@@ -21,9 +21,9 @@ export default function Reservations() {
         carId: cid,
         carModel: model,
         numOfDays: returnDate.diff(pickupDate, 'day'),
-        pickupDate: dayjs(pickupDate).format('YYY/MM/DD'),
+        pickupDate: dayjs(pickupDate).format('YYYY/MM/DD'),
         pickupLocation: pickupLocation,
-        returnDate: dayjs(returnDate).format('YYY/MM/DD'),
+        returnDate: dayjs(returnDate).format('YYYY/MM/DD'),
         returnLocation: returnLocation,
       };
       dispatch(addReservation(item));
